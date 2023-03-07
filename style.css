@@ -117,6 +117,10 @@ body {
 	transform: translateX(0);
 }
 
+.logo {
+	width: 3rem;
+}
+
 .burger {
 	width: 2.5rem;
 	height: 2.5rem;
@@ -203,9 +207,9 @@ body {
 	}
 
 	.menu-item:last-child .menu-link {
-		background: var(--MainAccent);
-		padding: 0.5rem 1.5rem;
-		border-radius: 1.2rem;
+		background: var(--SecondaryAccent);
+		padding: 0.5rem 2rem;
+		border-radius: 1.25rem;
 		color: var(--White);
 	}
 
