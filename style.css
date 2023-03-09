@@ -95,7 +95,7 @@ body {
 	flex-direction: column;
 	justify-content: space-around;
 	height: 100vh;
-	width: 100%;
+	width: 100vw;
 	background: var(--MainAccent);
 	position: absolute;
 	left: 0;
@@ -215,5 +215,55 @@ body {
 
 	.menu-item:last-child .menu-link::after {
 		display: none;
+	}
+}
+
+.hero {
+	width: 100%;
+	height: calc(100vh - 92px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+.hero-image {
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+}
+
+.hero-content {
+	text-align: center;
+	margin: 2rem 0;
+}
+
+.hero-content h1 {
+	font-size: 2.5rem;
+	color: var(--TextPrimary);
+}
+
+.hero-content span {
+	font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 1000px) {
+	.hero {
+		flex-direction: row;
+		align-items: center;
+	}
+	.hero-image {
+		width: 60%;
+	}
+	.hero-content {
+		width: 40%;
+	}
+
+	.hero-content h1 {
+		font-size: 3.5rem;
+	}
+
+	.hero-content span {
+		font-size: 2rem;
 	}
 }
