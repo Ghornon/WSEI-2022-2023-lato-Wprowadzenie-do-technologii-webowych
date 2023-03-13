@@ -8,6 +8,7 @@
 body {
 	font-size: 16px;
 	overflow-x: hidden !important;
+	color: var(--TextPrimary);
 }
 
 :root {
@@ -67,13 +68,13 @@ body {
 		rgba(213, 23, 188, 0.796078431372549)
 	);
 
-	--textColorHover: #26224b;
+	--TextColorHover: #26224b;
 
 	/* Box shadow style */
-	--shadow: rgba(0, 0, 0, 0.062) 0px 3px 5px;
+	--Shadow: rgba(0, 0, 0, 0.062) 0px 3px 5px;
 
 	/* Box shadow hovers */
-	--shadowHover: rgba(143, 143, 143, 0.212) 0px 5px 15px;
+	--ShadowHover: rgba(143, 143, 143, 0.212) 0px 5px 15px;
 
 	/* Animation states */
 	--shadowAnimationStart: rgba(240, 46, 170, 0.4) 0px 0px, rgba(240, 46, 170, 0.3) 0px 0px,
@@ -309,6 +310,30 @@ body {
 	}
 }
 
+/* SECTION TITLE */
+
+.section-title {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 10rem auto 5rem auto;
+	position: relative;
+	width: max-content;
+}
+
+.section-title-main {
+	background: var(--SecondaryAccent);
+	color: var(--White);
+	padding: 0.5rem 1rem;
+	border-radius: 1rem 0 1rem 0;
+	display: inline;
+}
+
+.section-title-sub {
+	color: var(--TextPrimary);
+}
+
+#project,
 #about {
 	width: 100%;
 	padding: 2rem;
@@ -322,13 +347,9 @@ body {
 .grid-item {
 	width: 100%;
 	padding: 3rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	text-align: center;
 	font-size: 1.25rem;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.062);
+	box-shadow: var(--Shadow);
 	border-radius: 0.25rem;
 }
 
@@ -344,28 +365,58 @@ body {
 	margin: 1rem;
 }
 
+.button:hover {
+	background: var(--SecondaryHover);
+}
+
+.grid-item {
+	color: var(--TextSecondary);
+}
+
+.grid-item .header-image {
+	max-width: 8rem;
+}
+
 .grid-item h1 {
 	font-size: 2.5rem;
 	color: var(--TextPrimary);
+	padding: 1rem 0;
 }
 
 .grid-item a {
 	color: var(--TextPrimary);
 }
 
+.grid-item a:hover {
+	color: var(--TextColorHover);
+}
+
+.grid-item span {
+	color: var(--TextPrimary);
+}
+
 .about-list {
 	display: flex;
 	list-style-type: none;
+	justify-content: center;
 }
 
 .about-list-item {
 	padding: 1rem;
+	color: var(--TextPrimary);
 }
 
 @media only screen and (min-width: 800px) {
 	.grid {
 		grid-template-columns: repeat(2, 1fr);
 		grid-auto-rows: minmax(100px, auto);
+	}
+
+	.grid-item:nth-child(3) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
@@ -392,5 +443,13 @@ body {
 	.grid-item:nth-child(4) {
 		grid-column: 3/5;
 		grid-row: 1/3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.grid-item:nth-child(4) .header-image {
+		max-width: 16rem;
 	}
 }
