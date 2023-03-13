@@ -230,10 +230,23 @@ body {
 	justify-content: center;
 	position: relative;
 	box-shadow: var(--Shadow);
+	padding: 4rem;
+	animation: heroBgAnimation 3s infinite alternate-reverse;
+	background: var(--MainAccent);
+	background-size: 200% 200%;
+}
+
+@keyframes heroBgAnimation {
+	from {
+		background-position: 0% 0%;
+	}
+	to {
+		background-position: 100% 100%;
+	}
 }
 
 .hero-image {
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
 	display: block;
 }
@@ -245,11 +258,12 @@ body {
 
 .hero-content h1 {
 	font-size: 2.5rem;
-	color: var(--TextPrimary);
+	color: var(--White);
 }
 
-.hero-content span {
+.hero-content > span {
 	font-size: 1.25rem;
+	color: var(--White);
 }
 
 @media only screen and (min-width: 1000px) {
@@ -258,10 +272,10 @@ body {
 		align-items: center;
 	}
 	.hero-image {
-		width: 40%;
+		width: 50%;
 	}
 	.hero-content {
-		width: 40%;
+		width: 50%;
 	}
 
 	.hero-content h1 {
@@ -278,7 +292,7 @@ body {
 	height: 4rem;
 	margin: 2rem auto;
 	border-radius: 1rem;
-	border: 0.2rem solid #7d62f2;
+	border: 0.2rem solid var(--White);
 	background: none;
 	display: block;
 	position: relative;
@@ -287,7 +301,7 @@ body {
 .scroll-down-circle {
 	height: 0.8rem;
 	width: 0.8rem;
-	background: var(--MainAccent);
+	background: var(--White);
 	border-radius: 50%;
 	animation: circleJump 1s infinite linear;
 	position: absolute;
@@ -345,7 +359,7 @@ body {
 
 .grid {
 	display: grid;
-	gap: 10px;
+	gap: 1.5rem;
 }
 
 .grid-item {
@@ -417,6 +431,7 @@ body {
 	}
 
 	.grid-item:nth-child(3) {
+		min-height: 400px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -490,6 +505,16 @@ body {
 	width: 50%;
 	display: block;
 	margin: 2rem auto;
+	animation: bounce 2s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes bounce {
+	from {
+		transform: scale(0.9);
+	}
+	to {
+		transform: scale(1);
+	}
 }
 
 @media only screen and (min-width: 800px) {
@@ -542,9 +567,10 @@ body {
 .contact-form textarea {
 	width: 100%;
 	font-size: 1rem;
-	padding: 0.5rem 0.2rem;
-	border-radius: 0.7rem;
-	border: 1px solid var(--TextSecondary);
+	padding: 1rem;
+	border-radius: 1rem 0 1rem 0;
+	border: 1px solid var(--TextPrimary);
+	color: var(--TextPrimary);
 }
 
 .contact-form-btn {
