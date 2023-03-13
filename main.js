@@ -21,7 +21,7 @@ burgerBtn.addEventListener('click', () => {
 	menu.classList.toggle('active');
 });
 
-const menuLinks = document.querySelectorAll('.menu-link');
+const menuLinks = document.querySelectorAll('.btn-scroll');
 
 menuLinks.forEach((link) =>
 	link.addEventListener('click', (event) => {

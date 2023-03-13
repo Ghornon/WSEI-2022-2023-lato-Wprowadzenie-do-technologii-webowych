@@ -231,17 +231,49 @@ body {
 	position: relative;
 	box-shadow: var(--Shadow);
 	padding: 4rem;
-	animation: heroBgAnimation 3s infinite alternate-reverse;
-	background: var(--MainAccent);
-	background-size: 200% 200%;
+	overflow: hidden;
 }
 
-@keyframes heroBgAnimation {
-	from {
-		background-position: 0% 0%;
+.waves {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	background: var(--SecondaryAccent);
+	z-index: -1;
+}
+
+.waves::before,
+.waves::after {
+	content: '';
+	position: absolute;
+	width: 300vw;
+	height: 300vw;
+	top: -65vw;
+	left: 50%;
+	transform: translate(50%, -75%);
+}
+
+.waves::before {
+	border-radius: 46%;
+	background: var(--MainAccent);
+	animation: waves 12s linear infinite;
+}
+
+.waves::after {
+	border-radius: 46%;
+	background: var(--MainAccent);
+	animation: waves 18s linear infinite;
+}
+
+@keyframes waves {
+	0% {
+		transform: translate(-50%, -75%) rotate(0deg);
 	}
-	to {
-		background-position: 100% 100%;
+
+	100% {
+		transform: translate(-50%, -75%) rotate(360deg);
 	}
 }
 
@@ -296,6 +328,7 @@ body {
 	background: none;
 	display: block;
 	position: relative;
+	cursor: pointer;
 }
 
 .scroll-down-circle {
@@ -381,10 +414,26 @@ body {
 	border: none;
 	font-size: 1.25rem;
 	margin: 1rem;
+	transition-property: color border;
+	transition-duration: 250ms;
+}
+
+.button-secondary {
+	background: none;
+	color: var(--White);
+	border: 2px solid var(--White);
+	display: block;
+	margin: 1rem auto;
 }
 
 .button:hover {
 	background: var(--SecondaryHover);
+}
+
+.button-secondary:hover {
+	background: none;
+	color: var(--TextColorHover);
+	border: 2px solid var(--TextColorHover);
 }
 
 .grid-item {
