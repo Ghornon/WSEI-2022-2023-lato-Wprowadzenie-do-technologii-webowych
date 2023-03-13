@@ -482,7 +482,7 @@ body {
 	margin-top: 0.5rem;
 }
 
-.about img {
+.about-content img {
 	width: 50%;
 	display: block;
 	margin: 2rem auto;
@@ -500,7 +500,7 @@ body {
 		width: 70%;
 	}
 
-	.about img {
+	.about-content img {
 		width: 30%;
 		display: block;
 		margin: 2rem auto;
