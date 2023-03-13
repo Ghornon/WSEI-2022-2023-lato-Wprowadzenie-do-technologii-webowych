@@ -75,14 +75,6 @@ body {
 
 	/* Box shadow hovers */
 	--ShadowHover: rgba(143, 143, 143, 0.212) 0px 5px 15px;
-
-	/* Animation states */
-	--shadowAnimationStart: rgba(240, 46, 170, 0.4) 0px 0px, rgba(240, 46, 170, 0.3) 0px 0px,
-		rgba(240, 46, 170, 0.2) 0px 0px, rgba(240, 46, 170, 0.1) 0px 0px,
-		rgba(240, 46, 170, 0.05) 0px 0px;
-	--shadowAnimationEnd: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-		rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
-		rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 #header {
@@ -226,6 +218,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
+	box-shadow: var(--Shadow);
 }
 
 .hero-image {
@@ -316,7 +309,7 @@ body {
 	font-size: 2rem;
 	font-weight: bold;
 	text-align: center;
-	margin: 10rem auto 5rem auto;
+	margin: 4rem auto;
 	position: relative;
 	width: max-content;
 }
@@ -505,4 +498,89 @@ body {
 		display: block;
 		margin: 2rem auto;
 	}
+}
+
+/* CONTACT */
+
+.contact {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.contact-content img {
+	display: none;
+}
+
+.contact-form {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.contact-form-field {
+	margin: 1rem;
+}
+
+.contact-form label {
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 0.2rem;
+	color: var(--TextPrimary);
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	font-size: 1rem;
+	padding: 0.5rem 0.2rem;
+	border-radius: 0.7rem;
+	border: 1px solid var(--TextSecondary);
+}
+
+.contact-form-btn {
+	background: var(--MainAccent);
+	border: none;
+	color: var(--White);
+	width: 50%;
+	font-size: 1rem;
+	display: block;
+	margin: 0 auto;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.contact-form-btn:hover {
+	background: var(--MainHover);
+}
+
+@media only screen and (min-width: 800px) {
+	.contact-form {
+		width: 65%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.contact img {
+		display: block;
+		width: 45%;
+	}
+	.contact-content {
+		display: flex;
+	}
+}
+
+/* FOOTER */
+
+#footer {
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0 1rem 0;
+}
+
+#footer a {
+	color: var(--TextPrimary);
+}
+#footer a:hover {
+	color: var(--TextColorHover);
 }
