@@ -1,3 +1,4 @@
+/* RESET */
 * {
 	padding: 0;
 	margin: 0;
@@ -5,11 +6,15 @@
 	font-family: 'Lato', sans-serif;
 }
 
+/* DEFAULT */
+
 body {
 	font-size: 16px;
 	overflow-x: hidden !important;
 	color: var(--TextPrimary);
 }
+
+/* VARS */
 
 :root {
 	/* Colors */
@@ -70,12 +75,10 @@ body {
 
 	--TextColorHover: #26224b;
 
-	/* Box shadow style */
 	--Shadow: rgba(0, 0, 0, 0.062) 0px 3px 5px;
-
-	/* Box shadow hovers */
-	--ShadowHover: rgba(143, 143, 143, 0.212) 0px 5px 15px;
 }
+
+/* HEADER */
 
 #header {
 	display: flex;
@@ -92,6 +95,8 @@ body {
 	box-shadow: var(--Shadow);
 	z-index: 100;
 }
+
+/* MENU */
 
 .menu {
 	display: flex;
@@ -221,6 +226,8 @@ body {
 		display: none;
 	}
 }
+
+/* HERO */
 
 #hero {
 	width: 100%;
@@ -384,25 +391,7 @@ body {
 	color: var(--TextPrimary);
 }
 
-#project,
-#about {
-	width: 100%;
-	padding: 2rem;
-}
-
-.grid {
-	display: grid;
-	gap: 1.5rem;
-}
-
-.grid-item {
-	width: 100%;
-	padding: 3rem;
-	text-align: center;
-	font-size: 1.25rem;
-	box-shadow: var(--Shadow);
-	border-radius: 0.25rem;
-}
+/* BUTTONS */
 
 .button {
 	background: var(--SecondaryAccent);
@@ -434,6 +423,30 @@ body {
 	background: none;
 	color: var(--TextColorHover);
 	border: 2px solid var(--TextColorHover);
+}
+
+/* SECTIONS */
+
+#project,
+#about {
+	width: 100%;
+	padding: 2rem;
+}
+
+/* PROJECT */
+
+.grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.grid-item {
+	width: 100%;
+	padding: 3rem;
+	text-align: center;
+	font-size: 1.25rem;
+	box-shadow: var(--Shadow);
+	border-radius: 0.25rem;
 }
 
 .grid-item {
